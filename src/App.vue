@@ -1,14 +1,15 @@
 <template>
   <div id="app">
     <h1>Rick & Morty Characters</h1>
-    <label for="character_select" >Select Character</label>
+    <hr>
+    <label for="character_select" >Select Character </label>
     <select id="character_select" v-model="selectedCharacter">
-      <option disabled value="">Select a Character</option>
+      <option disabled value="">Select a Character </option>
       <option v-for="character in characters" :key="character.name" :value="character">{{character.name}}</option>
 
     </select>
     <!-- <characters-list :characters='characters'></characters-list> -->
-    <character-detail v-if="selectedCharacter" :character="selectedCharacter"></character-detail>    
+    <character-detail v-if="selectedCharacter" :character="selectedCharacter"></character-detail>   
   </div>
 </template>
 
